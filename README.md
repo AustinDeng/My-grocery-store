@@ -8,7 +8,7 @@
 
 杂货铺的灵感来源于东野圭吾的《解忧杂货店》，这个仓库主要存储了邓某博客中比较好的一些文章，希望以此激励自己持续学习，同时，也希望可以对各位学习者有所帮助。
 
-如果您觉得有帮助，请给一个`star`叭~
+如果您觉得有帮助，请给一个**star**叭~
 
 内容较杂，诸君请便
 
@@ -30,8 +30,8 @@
 
 | Project | Version | Article |
 |:-------:|:-------:| :------: |
-|《Effective C++》|  | [《Effective C++》学习笔记](/articles/EffectiveCPP/EffectiveCPP学习笔记.md) |
-|《C Primer Plus》|  | [《C Primer Plus》学习笔记](/articles/CPrimerPlus/CPrimerPlus学习笔记.md) |
+|《Effective C++》| 第三版 | [《Effective C++》学习笔记](/articles/EffectiveCPP/EffectiveCPP学习笔记.md) |
+|《C Primer Plus》| 第六版 | [《C Primer Plus》学习笔记](/articles/CPrimerPlus/CPrimerPlus学习笔记.md) |
 
 ----------------------------------
 
