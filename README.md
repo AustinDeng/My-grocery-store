@@ -30,8 +30,8 @@
 
 | Project | Version | Article |
 |:-------:|:-------:| :------: |
-|《Effective C++》|  | [EffectiveCPP学习笔记](/articles/EffectiveCPP/EffectiveCPP学习笔记.md) |
-|《C Primer Plus》|  | [CPrimerPlus学习笔记](/articles/CPrimerPlus/CPrimerPlus学习笔记.md) |
+|《Effective C++》|  | [《Effective C++》学习笔记](/articles/EffectiveCPP/EffectiveCPP学习笔记.md) |
+|《C Primer Plus》|  | [《C Primer Plus》学习笔记](/articles/CPrimerPlus/CPrimerPlus学习笔记.md) |
 
 ----------------------------------
 
@@ -39,8 +39,8 @@
 
 | Project | Version | Article |
 |:-------:|:-------:| :------: |
-|面向对象编程(上)|  | [面向高级对象编程_上](/articles/面向对象编程(上)/面向高级对象编程_上.md) |
-|面向对象编程(下)|  | [面向高级对象编程_下](/articles/面向对象编程(下)/面向高级对象编程_下.md) |
+|面向对象编程(上)|  | [面向高级对象编程-上](/articles/面向对象编程(上)/面向高级对象编程_上.md) |
+|面向对象编程(下)|  | [面向高级对象编程-下](/articles/面向对象编程(下)/面向高级对象编程_下.md) |
 |STL标准库与泛型编程|  | [STL标准库与泛型编程](/articles/STL标准库与泛型编程/STL标准库与泛型编程.md) |
 
 ----------------------------------

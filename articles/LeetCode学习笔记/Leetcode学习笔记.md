@@ -15,7 +15,7 @@ categories:
 这个学习笔记用来记录一些比较琐碎的知识，一些专题知识如果以后有时间再归纳汇总吧。
 
 目前前的刷题进度如下：
-![进度.png](https://i.loli.net/2021/04/09/1FJXeVR6pNUitvQ.png)
+![进度.png](/images/进度.png)
 
 <!-- more -->
 
