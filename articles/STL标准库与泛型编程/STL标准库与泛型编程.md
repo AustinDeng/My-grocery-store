@@ -13,19 +13,19 @@ categories:
 
 STL六大组件包括**容器**(container)、**分配器**(allocator)、**算法**(algorithm)、**迭代器**(iterator)、**适配器**(adapter)和**仿函数**(functor).
 
-[![gU4qjH.png](https://z3.ax1x.com/2021/05/11/gU4qjH.png)](https://imgtu.com/i/gU4qjH)
+![](./images/1.png)
 
 <!-- more -->
 
 STL中的区间遵循前闭后开的表示方式,迭代器`begin`指向的是第一个元素的起点,`end`指向的是最后一个元素的下一个元素.
 
-[![gU4o4K.png](https://z3.ax1x.com/2021/05/11/gU4o4K.png)](https://imgtu.com/i/gU4o4K)
+![](./images/2.png)
 
 ## 容器
 
 STL中的容器大体分为**序列容器**、**关联容器**和**无序容器**.
 
-[![gU479O.png](https://z3.ax1x.com/2021/05/11/gU479O.png)](https://imgtu.com/i/gU479O)
+![](./images/3.png)
 
 下面测试程序演示STL中各容器的使用,创建辅助函数如下:
 
@@ -123,7 +123,7 @@ found, 20000
 
 ### 使用`vector`
 
-[![gU4IN6.png](https://z3.ax1x.com/2021/05/11/gU4IN6.png)](https://imgtu.com/i/gU4IN6)
+![](./images/4.png)
 
 ```C++
 #include <vector>
@@ -217,7 +217,7 @@ found, 23456
 
 ### 使用`list`
 
-[![gU45Ax.png](https://z3.ax1x.com/2021/05/11/gU45Ax.png)](https://imgtu.com/i/gU45Ax)
+![](./images/5.png)
 
 ```C++
 #include <list>
@@ -288,7 +288,7 @@ c.sort(), milli-seconds : 3610
 
 ### 使用`forward_list`
 
-[![gU4H3D.png](https://z3.ax1x.com/2021/05/11/gU4H3D.png)](https://imgtu.com/i/gU4H3D)
+![](./images/6.png)
 
 `forward_list`是C++11标准引入的,其前身是gcc中的`slist`.
 
@@ -355,11 +355,11 @@ c.sort(), milli-seconds : 3706
 
 ### 使用`deque`
 
-[![gU4bge.png](https://z3.ax1x.com/2021/05/11/gU4bge.png)](https://imgtu.com/i/gU4bge)
+![](./images/7.png)
 
 `deque`容器可以再双端插入和删除,其底层是分段连续的,对于使用者来说造成了一种连续的假象.
 
-[![gU4XDA.png](https://z3.ax1x.com/2021/05/11/gU4XDA.png)](https://imgtu.com/i/gU4XDA)
+![](./images/8.png)
 
 ```C++
 #include <deque>
@@ -434,7 +434,7 @@ sort(), milli-seconds : 2924
 
 | stack | queue |
 | :----: | :----: |
-| [![gU4Oud.png](https://z3.ax1x.com/2021/05/11/gU4Oud.png)](https://imgtu.com/i/gU4Oud) | [![gU4jHI.png](https://z3.ax1x.com/2021/05/11/gU4jHI.png)](https://imgtu.com/i/gU4jHI) |
+| ![](./images/9.png) | ![](./images/10.png) |
 
 这两个容器的元素进出是有严格顺序的,因此`stack`和`queue`不支持有关迭代器的操作.
 
@@ -527,7 +527,7 @@ queue.back()= 29870
 
 ### 使用`multiset`和`multimap`
 
-[![gU4xEt.png](https://z3.ax1x.com/2021/05/11/gU4xEt.png)](https://imgtu.com/i/gU4xEt)
+![](./images/11.png)
 
 `multiset`和`multimap`底层是使用红黑树实现的.
 
@@ -648,7 +648,7 @@ found, value=13328
 
 ### 使用`unordered_multiset`和`unordered_multimap`
 
-[![gU4zUP.png](https://z3.ax1x.com/2021/05/11/gU4zUP.png)](https://imgtu.com/i/gU4zUP)
+![](./images/12.png)
 
 `unordered_multiset`和`unordered_multimap`底层是使用hash+链表实现的.
 
@@ -791,7 +791,7 @@ found, value=20464
 
 STL容器默认的分配器是`std::allocator`,除此之外gcc额外定义了几个分配器,其头文件均在目录`ext`下.
 
-[![gU5ivQ.png](https://z3.ax1x.com/2021/05/11/gU5ivQ.png)](https://imgtu.com/i/gU5ivQ)
+![](./images/13.png)
 
 gcc额外定义的分配器均位于`__gnu_cxx`命名空间下.分配器一般用于构建容器,不会直接使用.因为分配器想要直接使用也不好用(使用`free`关键字时不需要指定回收内存的大小,而分配器的`deallocate`函数需要指定回收内存大小).
 
@@ -949,7 +949,7 @@ inline void __sort(_RandomAccessIterator __first, _RandomAccessIterator __last, 
 
 实现STL的两大基础就是**运算符重载**和**模板特化**.
 
-[![gU5S4f.png](https://z3.ax1x.com/2021/05/11/gU5S4f.png)](https://imgtu.com/i/gU5S4f)
+![](./images/14.png)
 
 ## 分配器
 
@@ -1023,7 +1023,7 @@ protected:
 
 `std::alloc`内部维护一个链表数组,数组中的每个链表保存某个尺寸的对象,减少了调用`malloc`的次数,从而减小了`malloc`带来的额外开销.
 
-[![gU59C8.png](https://z3.ax1x.com/2021/05/11/gU59C8.png)](https://imgtu.com/i/gU59C8)
+![](./images/15.png)
 
 在gcc4.9以后,默认分配器变为`std::allocator`,变回了对`::operator new`和`::operator delete`的简单封装.gcc2.9中的`std::alloc`更名为`__gnu_cxx::__pool_alloc`.
 
@@ -1031,13 +1031,13 @@ protected:
 
 STL容器的各实现类关系如下图所示,以缩排形式表示衍生关系(主要是**复合关系**).
 
-[![gU5Pgg.png](https://z3.ax1x.com/2021/05/11/gU5Pgg.png)](https://imgtu.com/i/gU5Pgg)
+![](./images/16.png)
 
 ### 容器`list`
 
 gcc2.9中`list`及相关类的代码如下所示:
 
-[![gU5C8S.png](https://z3.ax1x.com/2021/05/11/gU5C8S.png)](https://imgtu.com/i/gU5C8S)
+![](./images/17.png)
 
 ```C++
 template<class T, class Alloc = alloc>
@@ -1064,11 +1064,11 @@ struct __list_node {
 
 为实现前闭后开的特性,在环形链表末尾加入一个用以占位的空节点,并将迭代器`list::end()`指向该节点.
 
-[![gU5ADs.png](https://z3.ax1x.com/2021/05/11/gU5ADs.png)](https://imgtu.com/i/gU5ADs)
+![](./images/18.png)
 
 迭代器`__list_iterator`重载了指针的`*`,`->`,`++`,`--`等运算符,并定义了`iterator_category`、`value_type`、`difference_type`、`pointer`和`reference`5个**关联类型**(associated types),这些特征将被STL算法使用.
 
-[![gU5kuj.png](https://z3.ax1x.com/2021/05/11/gU5kuj.png)](https://imgtu.com/i/gU5kuj)
+![](./images/19.png)
 
 ```C++
 template<class T, class Ref, class Ptr>
@@ -1129,13 +1129,13 @@ __iterator_category(const _Iter &) {
 }
 ```
 
-[![gU5Ebn.png](https://z3.ax1x.com/2021/05/11/gU5Ebn.png)](https://imgtu.com/i/gU5Ebn)
+![](./images/20.png)
 
 迭代器的5个关联类型在类中均有定义,但是指针类型的关联类型需要根据指针类别进行确定,为了使STL算法同时兼容迭代器和一般指针,就在迭代器(指针)和算法之间加一个中间层**萃取器**(traits).
 
 迭代器萃取器`iterator_traits`能够兼容迭代器和一般指针,获取其5个关联类型:`iterator_category`、`value_type`、`difference_type`、`pointer`和`reference`.
 
-[![gU5eU0.png](https://z3.ax1x.com/2021/05/11/gU5eU0.png)](https://imgtu.com/i/gU5eU0)
+![](./images/21.png)
 
 在实现上,`iterator_traits`类使用模板的偏特化,对于一般的迭代器类型,直接取迭代器内部定义的关联类型;对于指针和常量指针进行偏特化,指定关联类型的值.
 
@@ -1208,7 +1208,7 @@ public:
 };
 ```
 
-[![gU5ZEq.png](https://z3.ax1x.com/2021/05/11/gU5ZEq.png)](https://imgtu.com/i/gU5ZEq)
+![](./images/22.png)
 
 容器`vector`的迭代器`start`指向第一个元素,迭代器`finish`指向最后一个元素的下一个元素,这两个迭代器对应`begin()`和`end()`的返回值,维持了**前闭后开**的特性.
 
@@ -1319,7 +1319,7 @@ public:
 
 `deque::map`的类型为二重指针`T**`,称为**控制中心**,其中每个元素指向一个buffer.
 
-[![gU5m5V.png](https://z3.ax1x.com/2021/05/11/gU5m5V.png)](https://imgtu.com/i/gU5m5V)
+![](./images/23.png)
 
 ```C++
 template<class T, class Ref, class Ptr, size_t BufSiz>
@@ -1457,7 +1457,7 @@ struct __deque_iterator {
 ### 容器`queue`和`stack`
 | stack | queue |
 | :----: | :----: |
-| [![gU5uCT.png](https://z3.ax1x.com/2021/05/11/gU5uCT.png)](https://imgtu.com/i/gU5uCT) | [![gU5K8U.png](https://z3.ax1x.com/2021/05/11/gU5K8U.png)](https://imgtu.com/i/gU5K8U) |
+| ![](./images/24.png) | ![](./images/25.png) |
 
 
 容器`queue`和`stack`作为`deque`的适配器(adapter),其内部均默认封装了一个`deque`作为底层容器,通过该`deque`执行具体操作.
@@ -1555,7 +1555,7 @@ cout << "queue.back()= " << q2.back() << endl;
 
 对于`rb_tree`,定义一个概念:节点的`value`包括其`key`和`data`,这里的`data`表示一般说法中的`value`.
 
-[![gU5M2F.png](https://z3.ax1x.com/2021/05/11/gU5M2F.png)](https://imgtu.com/i/gU5M2F)
+![](./images/26.png)
 
 ```C++
 template<class Key,				// 指定key类型
@@ -1577,7 +1577,7 @@ protected:
 
 `rb_tree`的`header`指向一个多余的空节点,用以维持其前闭后开的特性.
 
-[![gU5Qv4.png](https://z3.ax1x.com/2021/05/11/gU5Qv4.png)](https://imgtu.com/i/gU5Qv4)
+![](./images/27.png)
 
 下面程序演示`rb_tree`的使用:
 ```C++
@@ -1632,7 +1632,7 @@ public:
 
 `set`容器的模板参数推导过程如下:
 
-[![gU51KJ.png](https://z3.ax1x.com/2021/05/11/gU51KJ.png)](https://imgtu.com/i/gU51KJ)
+![](./images/28.png)
 
 ### 容器`map`和`multimap`
 
@@ -1669,7 +1669,7 @@ public:
 
 `map`容器的模板参数推导过程如下:
 
-[![g1R0r4.png](https://z3.ax1x.com/2021/05/07/g1R0r4.png)](https://imgtu.com/i/g1R0r4)
+![](./images/29.png)
 
 `map`容器重载的`[]`运算符返回对应`data`的引用
 
@@ -1688,7 +1688,7 @@ mapped_type& operator[](key_type&& __k)
 
 ### 容器`hashtable`
 
-[![g1RrZ9.png](https://z3.ax1x.com/2021/05/07/g1RrZ9.png)](https://imgtu.com/i/g1RrZ9)
+![](./images/30.png)
 
 `hashtable`最开始只有53个桶,当元素个数大于桶的个数时,桶的数目扩大为最接近当前桶数两倍的质数,实际上,桶数目的增长顺序被写死在代码里:
 
@@ -1798,7 +1798,7 @@ struct bidirectional_iterator_tag : public forward_iterator_tag {};
 struct random_access_iterator_tag : public bidirectional_iterator_tag {}:
 ```
 
-[![g1RwMF.png](https://z3.ax1x.com/2021/05/07/g1RwMF.png)](https://imgtu.com/i/g1RwMF)
+![](./images/31.png)
 
 之所以使用类而非枚举来表示迭代器类型,是出于一下两个考虑:
 
@@ -1845,7 +1845,7 @@ void test_iterator_category() {
 }
 ```
 
-[![g1RBqJ.png](https://z3.ax1x.com/2021/05/07/g1RBqJ.png)](https://imgtu.com/i/g1RBqJ)
+![](./images/32.png)
 
 容器`array`、`vector`、`deque`对使用者来说是连续空间,是**可以跳跃**的,其迭代器是`random_access_iterator`类型.
 
@@ -1916,7 +1916,7 @@ inline void advance(InputIterator &i, Distance n) {
 
 - STL中的算法`copy`根据不同的`iterator_category`和`type_traits`执行不同的重载函数
 
-[![g1RsaR.png](https://z3.ax1x.com/2021/05/07/g1RsaR.png)](https://imgtu.com/i/g1RsaR)
+![](./images/33.png)
 
 STL算法都是模板函数,无法对传入的`iterator_category`类型做出限定,但源码中的模板参数名还是对接收的`iterator_category`做出了一定的暗示.例如`sort`算法的模板参数类型名设为`RandomAccessIterator`,暗示了该算法只能接收`random_access_iterator_tag`类型的迭代器.
 
@@ -2006,7 +2006,7 @@ Function for_each(InputIterator first, InputIterator last, Function f) {
 
 C++11中引入了新的range-based for语句,形式如下:
 
-[![g1RyI1.png](https://z3.ax1x.com/2021/05/07/g1RyI1.png)](https://imgtu.com/i/g1RyI1)
+![](./images/34.png)
 
 下面程序演示其使用:
 
@@ -2169,7 +2169,7 @@ int main() {
 
 上面程序中的`rbegin`和`rend`是迭代器适配器,生成一个逆向增长的迭代器,后文会提到这两个类的源码.
 
-[![g1RcPx.png](https://z3.ax1x.com/2021/05/07/g1RcPx.png)](https://imgtu.com/i/g1RcPx)
+![](./images/35.png)
 
 ### 算法`binary_search`
 
@@ -2179,7 +2179,7 @@ int main() {
 
 算法`lower_bound`和`upper_bound`分别返回对应元素的第一个和最后一个**可插入位置**.
 
-[![g1R2RK.png](https://z3.ax1x.com/2021/05/07/g1R2RK.png)](https://imgtu.com/i/g1R2RK)
+![](./images/36.png)
 
 ```C++
 template<class ForwardIterator, class T>
@@ -2207,7 +2207,7 @@ ForwardIterator lower_bound(ForwardIterator first, ForwardIterator last, const T
 }
 ```
 
-[![g1RRxO.png](https://z3.ax1x.com/2021/05/07/g1RRxO.png)](https://imgtu.com/i/g1RRxO)
+![](./images/37.png)
 
 # STL仿函数源码分析
 
@@ -2453,7 +2453,7 @@ public:
 
 逆向迭代器适配器`reverse_iterator`与正常迭代器的方向正好相反:逆向迭代器的尾(头)就是正向迭代器的头(尾);逆向迭代器的加(减)运算就是正向迭代器的减(加)运算.因此逆向迭代器取值时取得是迭代器前面一格元素的值.
 
-[![g1RgG6.png](https://z3.ax1x.com/2021/05/07/g1RgG6.png)](https://imgtu.com/i/g1RgG6)
+![](./images/38.png)
 
 `reverse_iterator`源码如下:
 
@@ -2504,7 +2504,7 @@ advance(it, 3);
 copy(bar.begin(), bar.end(), inserter(foo, it));
 ```
 
-[![g1RfMD.png](https://z3.ax1x.com/2021/05/07/g1RfMD.png)](https://imgtu.com/i/g1RfMD)
+![](./images/39.png)
 
 `insert_iterator`通过重载运算符`=`、`*`和`++`实现上述功能:
 
@@ -2647,7 +2647,7 @@ istream_iterator<int> iit(cin), eos;
 copy(iit, eos, inserter(c, c.begin()));
 ```
 
-[![g1Rhse.png](https://z3.ax1x.com/2021/05/07/g1Rhse.png)](https://imgtu.com/i/g1Rhse)
+![](./images/40.png)
 
 # 其它标准库相关的话题
 
@@ -2721,7 +2721,7 @@ public:
 };
 ```
 
-[![g1R4qH.png](https://z3.ax1x.com/2021/05/07/g1R4qH.png)](https://imgtu.com/i/g1R4qH)
+![](./images/41.png)
 
 调用`head`函数返回的是元素`m_head`的值.
 
@@ -2775,7 +2775,7 @@ C++11在头文件`type_traits`中引入了一系列辅助类,这些辅助类能�
 
 官方网站上列出了所有用于类型萃取的辅助函数:
 
-[![g1RIZd.png](https://z3.ax1x.com/2021/05/07/g1RIZd.png)](https://imgtu.com/i/g1RIZd)
+![](./images/42.png)
 
 下面例子展示类型萃取机制的应用:
 
